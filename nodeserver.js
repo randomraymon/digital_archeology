@@ -9,9 +9,11 @@ io.on('connection', client => {
         console.log("started");
     });
     client.on('stage', data => {
-        console.log(data);
+        //console.log(data);
+        io.emit("stage",data);
     });
     client.on('disconnect', () => {
         /* … */ });
 });
+
 server.listen(3000);

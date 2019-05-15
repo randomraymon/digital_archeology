@@ -1,23 +1,49 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>Title of the document</title>
-<script src="socket.io.js"></script>
-<script>
-  var socket = io('http://localhost:3000');
-  socket.on('connect', function(){
-      console.log("connection works");
-  });
-  socket.on('stage', function(data){
-      console.log(data);
-  });
-  socket.on('disconnect', function(){});
-</script>
+  <meta charset="UTF-8">
+  <title>Title of the document</title>
+  <style>
+    .container {
+      font-size: 10rem;
+    }
+  </style>
 </head>
 
 <body>
-yes!!!
+  <div class="container">
+
+  </div>
+
+  <script src="./js/socket.io.js"></script>
+  <script>
+    var socket = io('http://localhost:3000');
+    socket.on('connect', function () {
+      console.log("connection works");
+    });
+    socket.on("stage", function (data) {
+      switch (data) {
+        case "1":
+          document.querySelector(".container").innerHTML = 1;
+          break;
+        case '2':
+          document.querySelector(".container").innerHTML = 2;
+          break;
+        case "3":
+          document.querySelector(".container").innerHTML = 3;
+          break;
+        case '4':
+          document.querySelector(".container").innerHTML = 4;
+          break;
+        case '5':
+          document.querySelector(".container").innerHTML = 5;
+          break;
+      }
+    });
+    socket.on('disconnect', function () {});
+  </script>
+
 </body>
 
 </html>
