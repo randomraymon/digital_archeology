@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Title of the document</title>
+<script src="socket.io.js"></script>
+<script>
+  var socket = io('http://localhost:3000');
+  socket.on('connect', function(){
+      console.log("connection works");
+  });
+  socket.on('stage', function(data){
+      console.log(data);
+  });
+  socket.on('disconnect', function(){});
+  setInterval(function() {
+      socket.emit("stage",2);
+  }, 1000)
+</script>
+</head>
+
+<body>
+yes!!!
+</body>
+
+</html>
