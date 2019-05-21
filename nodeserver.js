@@ -11,6 +11,7 @@ io.on('connection', client => {
     client.on('stage', data => {
         //console.log(data);
         io.emit("stage",data);
+
     });
     client.on('disconnect', () => {
         /* … */ });

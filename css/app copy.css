@@ -1,0 +1,130 @@
+
+
+body{
+
+    background-color: #EEE5DC;  
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("dram_os_background.png");
+   
+   
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+
+}
+
+.background_image{
+
+}
+
+
+
+h1{
+    
+    
+}
+h2 {
+
+
+}
+
+.introsmall{
+    font-size: 1.5rem;
+    text-align: center;
+    
+    
+
+}
+
+.introlarge{
+
+    font-size: 3rem;
+    text-align: center;
+}
+
+.introbody{
+    text-align: center;
+}
+
+.grid-x{
+
+    height: 33.333vh
+    
+}
+
+.mybutton{
+    margin-left: auto 0;
+    margin-right: auto 0;
+}
+
+
+.center_vertically {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+
+
+
+
+ 
+      .js-nametag{
+        position: absolute;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        
+      }
+      .js-nametag:nth-child(1){
+        animation-name: fade;
+        animation-fill-mode: both;
+        animation-iteration-count: infinite;
+        animation-duration: 5s;
+        animation-direction: alternate-reverse; 
+        -webkit-animation-delay: 5s;
+        animation-delay: 5s;
+    
+      }
+      
+      
+      .js-nametag:nth-child(2){
+        animation-name: fade;
+        animation-fill-mode: both;
+        animation-iteration-count: infinite;
+        animation-duration: 5s;
+        animation-direction: alternate;
+        -webkit-animation-delay: 5s;
+        animation-delay: 5s;
+     
+     
+        
+      }
+      
+      @keyframes fade{
+          0%,50% {
+            opacity: 0;
+
+            
+      }
+
+      
+
+          100%{
+            opacity: 1;
+        
+            
+           
+        }
+
+        
+      }

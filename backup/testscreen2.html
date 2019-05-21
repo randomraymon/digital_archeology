@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+ <meta content="utf-8" http-equiv="encoding">
+  <meta charset="UTF-8">
+  <title>Title of the document</title>
+  <style>
+    .container {
+      font-size: 3rem;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+      <h1>I am projection screen 2</h1>
+      <h2>and this is the idle state</h2>
+
+  </div>
+
+  <script src="./js/socket.io.js"></script>
+  <script>
+    var socket = io('http://localhost:3000');
+    socket.on('connect', function () {
+      console.log("connection works");
+    });
+    socket.on("stage", function (data) {
+      switch (data) {
+        case "1":
+          document.querySelector(".container").innerHTML = 1;
+          window.location.href = "/testscreen2.html";
+          break;
+        case '2':
+          document.querySelector(".container").innerHTML = 2;
+          window.location.href = "/projektion2.html";
+          break;
+        case "3":
+          document.querySelector(".container").innerHTML = 3;
+          break;
+        case '4':
+          document.querySelector(".container").innerHTML = 4;
+          break;
+        case '5':
+          document.querySelector(".container").innerHTML = 5;
+          break;
+        case '6':
+          document.querySelector(".container").innerHTML = 6;
+          break;
+      }
+    });
+    socket.on('disconnect', function () {});
+  </script>
+
+</body>
+
+</html>

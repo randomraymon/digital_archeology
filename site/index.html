@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Title of the document</title>
+<script src="./js/socket.io.js"></script>
+</head>
+
+<body>
+<button id="1">1</button>
+<button id="2">2</button>
+<button id="3">3</button>
+<button id="4">4</button>
+<button id="5">5</button>
+<button id="6">6</button>
+
+<script>
+    var socket = io('http://localhost:3000');
+    socket.on('connect', function(){
+        console.log("connection works");
+    });
+    socket.on('stage', function(data){
+        console.log(data);
+    });
+    socket.on('disconnect', function(){});
+  
+    // alle buttons in einem array
+    let buttons = document.querySelectorAll("button");
+    
+    // loop aka für jeden button tu dies&jenes 
+    buttons.forEach(function(button) {
+        // eventhandler anhängen bei click
+      button.addEventListener("click",function() {
+          // sende die id vom button (=nummer) als aktuelle stage 
+        socket.emit("stage",this.id);
+      });
+    });
+  </script>
+</body>
+
+</html>

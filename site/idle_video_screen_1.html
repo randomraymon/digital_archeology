@@ -1,0 +1,75 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation Starter Template</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="https://use.typekit.net/soh7qbv.css">
+    
+  </head>
+  <body class="video-body">
+   
+
+    <div class="responsive-embed video-background">
+        <div class="cell large 12">
+          <video loop muted autoplay >
+            <source src="screen_1.mp4" type="video/mp4">
+
+
+        </div>
+    </div>
+  
+
+    
+
+
+    
+
+
+    
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+
+<script src="./js/socket.io.js"></script>
+<script>
+  var socket = io('http://localhost:3000');
+  socket.on('connect', function () {
+    console.log("connection works");
+  });
+  socket.on("stage", function (data) {
+    switch (data) {
+      case "1":
+        window.location.href = "/idle_video_screen_1";
+        break;
+      case '2':
+        document.querySelector(".container").innerHTML = 2;
+        window.location.href = "/template_dream_OS.html";
+        break;
+      case "3":
+        document.querySelector(".container").innerHTML = 3;
+        break;
+      case '4':
+        document.querySelector(".container").innerHTML = 4;
+        break;
+      case '5':
+        document.querySelector(".container").innerHTML = 5;
+        break;
+      case '6':
+        document.querySelector(".container").innerHTML = 6;
+        break;
+    }
+  });
+  socket.on('disconnect', function () {});
+</script>
+
+  </body>
+</html>

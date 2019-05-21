@@ -12,6 +12,7 @@
 <button id="3">3</button>
 <button id="4">4</button>
 <button id="5">5</button>
+<button id="6">6</button>
 
 <script>
     var socket = io('http://localhost:3000');
@@ -32,6 +33,8 @@
       button.addEventListener("click",function() {
           // sende die id vom button (=nummer) als aktuelle stage 
         socket.emit("stage",this.id);
+        socket.emit("stage1",this.id);
+
       });
     });
   </script>

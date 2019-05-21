@@ -1,0 +1,196 @@
+@font-face {
+  font-family: 'silkscreen_expandednormal';
+  src: url('fonts/slkscre-webfont.woff2') format('woff2'),
+       url('fonts/slkscre-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+  
+  
+
+html, body{
+
+  height: 100%;
+}
+
+.background_image{
+
+    background-color: #EEE5DC;  
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("dram_os_background.png");
+   
+   
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+
+}
+
+
+
+.video-background{
+  background-color: black;
+  height: 100%;
+
+}
+
+
+
+.topandbottom{
+  height: 20vh;
+}
+
+.contenthere{
+  height: 60vh;
+  
+
+}
+
+.heading{
+  height: 5%;
+  font-size: 1em;
+  background-color: #91A0AC;
+  font-family: 'silkscreen_expandednormal';
+}
+
+.heading_align{
+  height: 100%;
+  margin-left: 1%;
+  margin-top: 4px;
+
+
+
+}
+
+.textlarge{
+  font-size: 4.5rem;
+  color: #D5BBB8;
+  font-family: adorn-condensed-sans, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+}
+
+.textsmall{
+  color: white;
+  font-family: houschka-rounded,sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  line-height: 1.3;
+  
+}
+
+.content_container{
+  height: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.dreamoswindow{
+  background-color: #CDE0DD;
+  border-style: solid;
+  border-color: white;
+}
+
+.makespace{
+  margin-top: 15%;
+
+}
+
+.button{
+  margin-top: 4%;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #91A0AC;
+  font-family: 'silkscreen_expandednormal';
+  font-size: 1rem;
+  border-style: solid;
+  border-color: white;
+  border-width: 2px;
+  -webkit-box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.75);
+  box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.75);
+
+
+
+}
+
+.button:hover{
+
+  background-color: #6F5368;
+
+}
+
+
+
+
+
+
+
+
+
+
+ 
+      .js-nametag{
+        position: absolute;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        
+      }
+      .js-nametag:nth-child(1){
+        animation-name: fade;
+        animation-fill-mode: both;
+        animation-iteration-count: infinite;
+        animation-duration: 5s;
+        animation-direction: alternate-reverse; 
+        -webkit-animation-delay: 5s;
+        animation-delay: 5s;
+    
+      }
+      
+      
+      .js-nametag:nth-child(2){
+        animation-name: fade;
+        animation-fill-mode: both;
+        animation-iteration-count: infinite;
+        animation-duration: 5s;
+        animation-direction: alternate;
+        -webkit-animation-delay: 5s;
+        animation-delay: 5s;
+     
+     
+        
+      }
+      
+      @keyframes fade{
+          0%,50% {
+            opacity: 0;
+
+            
+      }
+
+      
+
+          100%{
+            opacity: 1;
+        
+            
+           
+        }
+
+        
+      }
